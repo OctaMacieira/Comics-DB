@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Comic comicBooks</h3>
+
+<a href="/comicbooks/add" class="btn btn-success btn-sm">
+    <i class="glyphicon glyphicon-plus"></i>
+    Add comicbook
+</a>
+
+{% for comicbook in comicbooks %}
+<div class="media">
+    <a href="/comicbooks/{{comicbook.id}}">
+        <div class="media-body">
+            <h4>{{comicbook.title}}</h4>
+            <p>{{comicbook.author}}</p>
+        </div>
+    </a>
+</div>
+{% else %}
+<p>No comicbooks found</p>
+{% endfor %}
+
+{% endblock %}

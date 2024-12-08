@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Comic Book</h3>
+
+<div class="btn-group">
+    <a href="/comicbooks/{{comicbook.id}}/edit" class="btn btn-primary btn-sm">
+        <i class="glyphicon glyphicon-edit"></i>
+        Edit book
+    </a>
+    <a href="/books/{{comicbook.id}}/delete" class="btn btn-danger btn-sm">
+        <i class="glyphicon glyphicon-trash"></i>
+        Delete book
+    </a>
+</div>
+
+<div class="media">
+    <div class="media-body">
+        <h4 class="book-title">
+            {{comicbook.title}}
+            <small>{{comicbook.publishedDate}}</small>
+        </h4>
+        <h5 class="comicbook-author">By {{comicbook.author|default('Unknown', True)}}</h5>
+        <p class="comicbook-description">{{comicbook.description}}</p>
+    </div>
+</div>
+
+{% endblock %}

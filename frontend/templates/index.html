@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     <head>
         <title>Comic Books Database</title>
         <meta charset="utf-8">
@@ -17,6 +17,24 @@
                 </ul>
             </div>
         </div>
+        <section class="new-comic-book">
+            <input type="text" id="newInput" placeholder="Título quadrinho:">
+            <input type="text" id="newPrice" placeholder="Valor:">
+            <input type="text" id="newState" placeholder="Estado de Conservação:">
+            <input type="text" id="newInsertionDate" placeholder="Data de Inserção:">
+            <button onclick="newItem()" class="addBtn">Adicionar</button>
+        </section>
+        <section class="comic-books">
+            <table id="comic-books-table">
+                <tr>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Estado</th>
+                    <th>Data de Inserção</th>
+                    <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th>
+                </tr>
+            </table>
+        </section>
         <div class="container">
             {% block content %}{% endblock %}
         </div>

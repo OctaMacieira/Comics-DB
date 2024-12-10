@@ -26,7 +26,7 @@ def view(comic_book_id):
     return render_template('view.html', comic_book=comic_book)
 
 
-@app.route('/books/add', methods=['GET', 'POST'])
+@app.route('/comic-books/add', methods=['GET', 'POST'])
 def add():
     """
     If GET, show the form to collect details of a new book.

@@ -1,10 +1,13 @@
 from flask import current_app, Flask, redirect, render_template
 from flask import request, url_for
-import logging
+from flask_swagger import swagger
+
+from model import base, comic_book
 
 import comic_books_db
 
 app = Flask(__name__)
+swagger = Swagger(app)
 
 
 @app.route('/')

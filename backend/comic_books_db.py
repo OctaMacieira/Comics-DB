@@ -3,16 +3,16 @@ from sqlalchemy.orm import relationship
 from datetime import datetime
 from typing import Union
 
-from model import Base, Comentario
+from model import Base
 
 class Comic_Book(Base):
     __tablename__ = "comic_book"
 
     id = Column("pk_comic_book", Integer, primary_key=True)
     name = Column(String(120), unique=True)
-    valor = Column(Float)
+    value = Column(Float)
     state = Column(String(15))
-    data_insercao = Column(DateTime, default=datetime.now())
+    insertion_date = Column(DateTime, default=datetime.now())
 
     def doc_to_dict(doc):
         if not doc.exists:
